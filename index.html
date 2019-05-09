@@ -13,7 +13,7 @@
             padding: 11%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             height: 50%;
             width: 80%;
             background: #333;
@@ -84,10 +84,7 @@
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/rasenshuriken.gif" alt="">
                 </div>
-                <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/sakura.gif" alt="">
-                </div>
+               
                 <div id="card_container">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/sasuke.gif" alt="">
@@ -125,10 +122,7 @@
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/rasenshuriken.gif" alt="">
                 </div>
-                <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/sakura.gif" alt="">
-                </div>
+            
                 <div id="card_container">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/sasuke.gif" alt="">
@@ -137,8 +131,20 @@
         </div>
     </body>
     <script>
-        $('.back_face').click(function(){
-            $('.back_face').hide();
-        });
+        // function cover_card(){
+        //     $('back_face').click(function(){
+        //         $('.back_face').show();
+        //     });
+        // }
+        
+        // function reveal_card(){
+        //     $('.back_face').click(function(cover_card){
+        //         $('.back_face').hide();
+        //     });
+        // }
+
+        $('.back_face').click(function(cover_card){
+                $('.back_face').hide();
+            });
     </script>
 </html>
