@@ -3,13 +3,29 @@
         <title>Naruto Memory Match Game</title>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <style>
+         h1 { 
+            position: absolute;
+            text-align: center;
+            height: 80%;
+            width: 75%;
+            margin-bottom: 1px;
+        }    
+        #difficulty {
+            position: absolute;
+            height: 10%;
+            width: 15%;
+            right: -20px;
+            display: flex;
+        }        
+
         #game_container {
             height: 100%;
             width: 100%;
-            position: absolute;
+            position: absolute;   
         } 
-
+ 
         #game_board {
+            position: absolute;
             padding: 11%;
             display: flex;
             flex-wrap: wrap;
@@ -21,10 +37,10 @@
         }
 
         #card_container {
-            box-shadow: 40px 40px black; 
+            box-shadow: 5px 5px black; 
             margin: 2%;
-            height: 500px;
-            width: 400px;
+            height: 100px;
+            width: 80px;
             position: relative;
         }
 
@@ -42,15 +58,20 @@
     </head>
     <body>
         <div id="game_container">
-            <header>
-                <h1> Naruto Memory Match</h1>
-            </header>
-             
-            <div id="stats_container"></div>
-
-            <div id="difficulty"></div>
+            
+            <div id="stats_container">
+            </div>
 
             <div id="game_board">
+                    <header>
+                        <h1> Naruto Memory Match</h1>
+                     </header>
+                    <div id="difficulty">
+                            <div>Hokage</div>
+                            <div>Jounin</div>
+                            <div>Chuunin</div>
+                            <div>Genin</div>
+                        </div>
                
                 <div id="card_container">
                     <img class="back_face" src="images/cover2.jpg" alt="">
@@ -122,11 +143,47 @@
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/rasenshuriken.gif" alt="">
                 </div>
-            
                 <div id="card_container">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                     <img class="front_face" src="images/sasuke.gif" alt="">
                 </div>
+
+                <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/hashirama.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                         <img class="back_face" src="images/cover2.jpg" alt="">
+                         <img class="front_face" src="images/jiraiya.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/kakashi.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/madara.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/minato.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/obikak.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/orochimaru.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                    </div>
+                    <div id="card_container">
+                        <img class="back_face" src="images/cover2.jpg" alt="">
+                        <img class="front_face" src="images/sasuke.gif" alt="">
+                    </div>
             </div>
         </div>
     </body>
