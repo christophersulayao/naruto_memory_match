@@ -7,9 +7,42 @@
 body {
     height: 100vh;
     background: blue;
+    display: flex;
 }
 
-img {
+.memory-game {
+    width: 540px;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid yellow;
+    margin: auto;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    margin: 5px;
+    transform: scale (1);
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid deeppink;
+    padding: 20px;
+    border-radius: 5px;
+    background: #1c7ccc;
+}
+
+/* img {
     width: 100px;
     height: 200px;
-}
+} */
