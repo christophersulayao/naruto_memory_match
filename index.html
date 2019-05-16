@@ -3,61 +3,48 @@
         <title>Naruto Memory Match Game</title>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         body {
             height: 100vh;
-        }    
-
-         h1 { 
-            position: absolute;
-            text-align: center;
-            height: 80%;
-            width: 75%;
-            margin-bottom: 10%;
-        }    
-        #difficulty {
-            position: absolute;
-            height: 10%;
-            width: 15%;
-            right: -20px;
+            background: blue;
             display: flex;
-        }        
+        }
 
-        #game_container {
-            height: 100%;
-            width: 100%;
-            position: absolute;   
-        } 
- 
         #game_board {
-            position: absolute;
-            padding: 11%;
+            width: 540px;
+            height: 540px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            height: 50%;
-            width: 80%;
-            background: #333;
-            opacity: .9;         
+            border: 2px solid orange;
+            margin: auto;
         }
 
         #card_container {
-            display: inline-block;
-            box-shadow: 5px 5px black; 
-            margin: 1% auto;
-            height: 40%;
-            width: 16.6%;
+            width: calc(20% - 10px);
+            height: calc(25% - 10px);
             position: relative;
+            margin: 5px;
+            transform: scale (1);
         }
 
-        .front_face {
-            width: 100%;
-            height: 100%;
+        #card_container:active {
+            transform: scale(.97);
+            transition: transform .2s;
         }
 
-        .back_face {
+        .front_face, .back_face {
             width: 100%;
             height: 100%;
             position: absolute;
+            border: 2px solid orangered;
+            padding: 20px;
+            border-radius: 5px;
+            background: #1c7ccc;
         }
         </style>
     </head>
@@ -76,120 +63,89 @@
                 <div>Genin</div>
             </div>
 
-            <div id="game_board">
+            <section id="game_board">
                 <div id="card_container">
                     <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/hashirama.gif" alt="">
+                    <img class="front_face" src="images/hashirama.gif" alt="1">
                 </div>
                 <div id="card_container">
-                     <img class="back_face" src="images/cover2.jpg" alt="">
-                     <img class="front_face" src="images/jiraiya.gif" alt="">
+                     <img class="front_face" src="images/cover2.jpg" alt="">
+                     <img class="back_face" src="images/jiraiya.gif" alt="2">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/kakashi.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/kakashi.gif" alt="3">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/madara.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/madara.gif" alt="4">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/minato.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/minato.gif" alt="5">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/obikak.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/obikak.gif" alt="6">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/orochimaru.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/orochimaru.gif" alt="7">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
-                </div>
-               
-                <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/sasuke.gif" alt="">
-                </div>
-               
-                <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/hashirama.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/rasenshuriken.gif" alt="8">
                 </div>
                 <div id="card_container">
-                     <img class="back_face" src="images/cover2.jpg" alt="">
-                     <img class="front_face" src="images/jiraiya.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/tsunade.gif" alt="9">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/kakashi.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/sasuke.gif" alt="10">
+                </div>
+               <div id="card_container">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/hashirama.gif" alt="1">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/madara.gif" alt="">
+                     <img class="front_face" src="images/cover2.jpg" alt="">
+                     <img class="back_face" src="images/jiraiya.gif" alt="2">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/minato.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/kakashi.gif" alt="3">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/obikak.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/madara.gif" alt="4">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/orochimaru.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/minato.gif" alt="5">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/obikak.gif" alt="6">
                 </div>
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/sasuke.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/orochimaru.gif" alt="7">
                 </div>
-
-                <!-- <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/hashirama.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                         <img class="back_face" src="images/cover2.jpg" alt="">
-                         <img class="front_face" src="images/jiraiya.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/kakashi.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/madara.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/minato.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/obikak.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/orochimaru.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/rasenshuriken.gif" alt="">
-                    </div>
-                    <div id="card_container">
-                        <img class="back_face" src="images/cover2.jpg" alt="">
-                        <img class="front_face" src="images/sasuke.gif" alt="">
-                    </div> -->
+                <div id="card_container">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/rasenshuriken.gif" alt="8">
+                </div>
+                <div id="card_container">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/tsunade.gif" alt="9">
+                </div>
+                <div id="card_container">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/sasuke.gif" alt="10">
+                </div>
             </div>
-        </div>
+        </section>
     </body>
     <script>
         // function cover_card(){
@@ -204,8 +160,8 @@
         //     });
         // }
 
-        $('.back_face').click(function(cover_card){
-                $('.back_face').hide();
-            });
+        // $('.back_face').click(function(cover_card){
+        //         $('.back_face').hide();
+        //     });
     </script>
 </html>
