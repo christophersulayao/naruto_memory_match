@@ -55,6 +55,10 @@
             border-radius: 5px;
             background: blue;
         }
+
+        #card_container.flip {
+            transform: rotateY(180deg);
+        }
         </style>
     </head>
     <body>
@@ -154,20 +158,12 @@
         </section>
     </body>
     <script>
-        // function cover_card(){
-        //     $('back_face').click(function(){
-        //         $('.back_face').show();
-        //     });
-        // }
-        
-        // function reveal_card(){
-        //     $('.back_face').click(function(cover_card){
-        //         $('.back_face').hide();
-        //     });
-        // }
-
-        // $('.back_face').click(function(cover_card){
-        //         $('.back_face').hide();
-        //     });
+        const cards = document.querySelectorAll('#card_container');
+        function flipCard(){
+            this.classList.toggle('flip');
+            console.log('Card was cicked');
+            console.log(this);
+        }
+        cards.forEach(card => card.addEventListener('click', flipCard));
     </script>
 </html>
