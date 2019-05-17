@@ -81,83 +81,83 @@
             </div> -->
 
             <section id="game_board">
-                <div id="card_container">
+                <div id="card_container" data-framework="hashirama">
                     <img class="front_face" src="images/hashirama.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="jiraiya">
                      <img class="front_face" src="images/jiraiya.gif" alt="">
                      <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="kakashi">
                     <img class="front_face" src="images/kakashi.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="madara">
                     <img class="front_face" src="images/madara.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="minato">
                     <img class="front_face" src="images/minato.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="obikak">
                     <img class="front_face" src="images/obikak.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="orochimaru">
                     <img class="front_face" src="images/orochimaru.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="rasenshuriken">
                     <img class="front_face" src="images/rasenshuriken.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="tsunade">
                     <img class="front_face" src="images/tsunade.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="sasuke">
                     <img class="front_face" src="images/sasuke.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="hashirama">
                     <img class="front_face" src="images/hashirama.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="jiraiya">
                      <img class="front_face" src="images/jiraiya.gif" alt="">
                      <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="kakashi"> 
                     <img class="front_face" src="images/kakashi.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="madara">
                     <img class="front_face" src="images/madara.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="minato">
                     <img class="front_face" src="images/minato.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="obikak">
                     <img class="front_face" src="images/obikak.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="orochimaru">
                     <img class="front_face" src="images/orochimaru.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="rasenshuriken">
                     <img class="front_face" src="images/rasenshuriken.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="tsunade">
                     <img class="front_face" src="images/tsunade.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
-                <div id="card_container">
+                <div id="card_container" data-framework="sasuke">
                     <img class="front_face" src="images/sasuke.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
@@ -165,11 +165,35 @@
     </body>
     <script>
         const cards = document.querySelectorAll('#card_container');
-        function flipCard(){
+
+        let has_flipped_card = false;
+        let first_card;
+        let second_card;
+
+        function flip_Card(){
             this.classList.toggle('flip');
-            console.log('Card was cicked');
-            console.log(this);
+
+            if(!has_flipped_card){
+                has_flipped_card = true;
+                first_card = this;
+                // console.log(has_flipped_card, first_card);                
+            } else {
+                has_flipped_card = false;
+                second_card = this;
+        
+                if(first_card.dataset.framework === second_card.dataset.framework){
+                    first_card.removeEventListener('click', flip_Card);
+                    second_card.removeEventListener('click', flip_Card);
+                } else {
+                   setTimeout(() => {
+                    first_card.classList.remove('flip');
+                    second_card.classList.remove('flip');
+                   }, 1500);
+                }
+            }
+
+        
         }
-        cards.forEach(card => card.addEventListener('click', flipCard));
+        cards.forEach(card => card.addEventListener('click', flip_Card));
     </script>
 </html>
