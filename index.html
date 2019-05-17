@@ -16,6 +16,7 @@
         }
 
         #game_board {
+            perspective: 1000px;
             width: 540px;
             height: 540px;
             display: flex;
@@ -29,6 +30,8 @@
             position: relative;
             margin: 5px;
             transform: scale (1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
         }
 
         #card_container:active {
@@ -44,21 +47,24 @@
             padding: 10px;
             border-radius: 5px;
             background: blue;
+            transform: rotateY(180deg);
         }
 
         .back_face {
             width: 100%;
             height: 100%;
-            /* position: absolute; */
+            position: absolute;
             border: 2px solid orange;
             padding: 10px;
             border-radius: 5px;
             background: blue;
+            backface-visibility: hidden;
         }
 
         #card_container.flip {
             transform: rotateY(180deg);
         }
+
         </style>
     </head>
     <body>
@@ -76,84 +82,84 @@
 
             <section id="game_board">
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/hashirama.gif" alt="">
+                    <img class="front_face" src="images/hashirama.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                     <img class="front_face" src="images/cover2.jpg" alt="">
-                     <img class="back_face" src="images/jiraiya.gif" alt="">
+                     <img class="front_face" src="images/jiraiya.gif" alt="">
+                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/kakashi.gif" alt="">
+                    <img class="front_face" src="images/kakashi.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/madara.gif" alt="">
+                    <img class="front_face" src="images/madara.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/minato.gif" alt="">
+                    <img class="front_face" src="images/minato.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/obikak.gif" alt="">
+                    <img class="front_face" src="images/obikak.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/orochimaru.gif" alt="">
+                    <img class="front_face" src="images/orochimaru.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/rasenshuriken.gif" alt="">
+                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/tsunade.gif" alt="">
+                    <img class="front_face" src="images/tsunade.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/sasuke.gif" alt="">
-                </div>
-               <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/hashirama.gif" alt="">
+                    <img class="front_face" src="images/sasuke.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                     <img class="front_face" src="images/cover2.jpg" alt="">
-                     <img class="back_face" src="images/jiraiya.gif" alt="">
+                    <img class="front_face" src="images/hashirama.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/kakashi.gif" alt="">
+                     <img class="front_face" src="images/jiraiya.gif" alt="">
+                     <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/madara.gif" alt="">
+                    <img class="front_face" src="images/kakashi.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/minato.gif" alt="">
+                    <img class="front_face" src="images/madara.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/obikak.gif" alt="">
+                    <img class="front_face" src="images/minato.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/orochimaru.gif" alt="">
+                    <img class="front_face" src="images/obikak.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/rasenshuriken.gif" alt="">
+                    <img class="front_face" src="images/orochimaru.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/tsunade.gif" alt="">
+                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
                 <div id="card_container">
-                    <img class="front_face" src="images/cover2.jpg" alt="">
-                    <img class="back_face" src="images/sasuke.gif" alt="">
+                    <img class="front_face" src="images/tsunade.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
+                </div>
+                <div id="card_container">
+                    <img class="front_face" src="images/sasuke.gif" alt="">
+                    <img class="back_face" src="images/cover2.jpg" alt="">
                 </div>
         </section>
     </body>
