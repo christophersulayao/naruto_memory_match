@@ -20,7 +20,6 @@
             height: 540px;
             display: flex;
             flex-wrap: wrap;
-            border: 2px solid white;
             margin: auto;
         }
 
@@ -37,14 +36,28 @@
             transition: transform .2s;
         }
 
-        .front_face, .back_face {
+        .front_face {
             width: 100%;
             height: 100%;
             position: absolute;
-            border: 2px solid red;
+            border: 2px solid orange;
             padding: 10px;
             border-radius: 5px;
             background: blue;
+        }
+
+        .back_face {
+            width: 100%;
+            height: 100%;
+            /* position: absolute; */
+            border: 2px solid orange;
+            padding: 10px;
+            border-radius: 5px;
+            background: blue;
+        }
+
+        #card_container.flip {
+            transform: rotateY(180deg);
         }
         </style>
     </head>
@@ -63,8 +76,8 @@
 
             <section id="game_board">
                 <div id="card_container">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                    <img class="front_face" src="images/hashirama.gif" alt="">
+                    <img class="front_face" src="images/cover2.jpg" alt="">
+                    <img class="back_face" src="images/hashirama.gif" alt="">
                 </div>
                 <div id="card_container">
                      <img class="front_face" src="images/cover2.jpg" alt="">
@@ -145,20 +158,12 @@
         </section>
     </body>
     <script>
-        // function cover_card(){
-        //     $('back_face').click(function(){
-        //         $('.back_face').show();
-        //     });
-        // }
-        
-        // function reveal_card(){
-        //     $('.back_face').click(function(cover_card){
-        //         $('.back_face').hide();
-        //     });
-        // }
-
-        // $('.back_face').click(function(cover_card){
-        //         $('.back_face').hide();
-        //     });
+        const cards = document.querySelectorAll('#card_container');
+        function flipCard(){
+            this.classList.toggle('flip');
+            console.log('Card was cicked');
+            console.log(this);
+        }
+        cards.forEach(card => card.addEventListener('click', flipCard));
     </script>
 </html>
