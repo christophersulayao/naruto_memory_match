@@ -22,8 +22,10 @@
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            margin-top: 11%;
-            border: 2px solid deeppink;
+            margin-top: 19%;
+            /* background:white;
+            opacity: 90%; */
+            /* border: 2px solid deeppink; */
         }
 
         #card_container {
@@ -67,13 +69,13 @@
             transform: rotateY(180deg);
         }
 
-        h1 {
-            color: black;
-            margin: 5% 45%;
+        h1 > img {
+            margin: 0.5% 29.2%;
             background-color: white;
             position: absolute;
-            font-size: 100%;
             padding: 1%;
+            background: blue;
+            border: 2px solid orange;
         }
 
         </style>
@@ -90,7 +92,7 @@
                 <div>Chuunin</div>
                 <div>Genin</div>
             </div> -->
-            <h1>Naruto Game</h1>
+            <h1><img src="images/header.png" alt=""></h1>
             <section id="game_board">
                 
                 <div id="card_container" data-framework="hashirama">
@@ -204,6 +206,8 @@
                 }
             }
         }
+
+        
 
         (function shuffle_cards(){
             cards.forEach(card => {
