@@ -22,6 +22,10 @@
             display: flex;
             flex-wrap: wrap;
             margin: auto;
+            margin-top: 19%;
+            /* background:white;
+            opacity: 90%; */
+            /* border: 2px solid deeppink; */
         }
 
         #card_container {
@@ -65,11 +69,13 @@
             transform: rotateY(180deg);
         }
 
-        h1 {
-            color: black;
-            margin: 7% 36%;
+        h1 > img {
+            margin: 0.5% 29.2%;
             background-color: white;
-            
+            position: absolute;
+            padding: 1%;
+            background: blue;
+            border: 2px solid orange;
         }
 
         </style>
@@ -86,9 +92,9 @@
                 <div>Chuunin</div>
                 <div>Genin</div>
             </div> -->
-
+            <h1><img src="images/header.png" alt=""></h1>
             <section id="game_board">
-                <h1>Naruto Game</h1>
+                
                 <div id="card_container" data-framework="hashirama">
                     <img class="front_face" src="images/hashirama.gif" alt="">
                     <img class="back_face" src="images/cover2.jpg" alt="">
@@ -184,7 +190,7 @@
             if(!has_flipped_card){
                 has_flipped_card = true;
                 first_card = this;
-                // console.log(has_flipped_card, first_card);                
+                            
             } else {
                 has_flipped_card = false;
                 second_card = this;
@@ -200,6 +206,8 @@
                 }
             }
         }
+
+        
 
         (function shuffle_cards(){
             cards.forEach(card => {
