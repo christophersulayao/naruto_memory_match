@@ -11,7 +11,7 @@
 
         body {
             height: 100vh;
-            background: black;
+            background: #f4f4f4;
             display: flex;
         }
 
@@ -22,10 +22,7 @@
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            margin-top: 27%;
-            /* background:white;
-            opacity: 90%; */
-            /* border: 2px solid deeppink; */
+            margin-top: 4rem;
         }
 
         #card_container {
@@ -69,116 +66,108 @@
             transform: rotateY(180deg);
         }
 
-        h1 > img {
-            margin: 0% 8.5%;
-            background-color: white;
+        
+        .container {
+            display: flex;
+        }
+
+        #header .container h1 {
             position: absolute;
-            padding: 1%;
-            background: blue;
-            border: 2px solid orange;
+            margin-top: 1rem;
+            margin-left: 42%;
+              
         }
 
         </style>
     </head>
     <body>
-            <!-- <div id="stats_container">
+        <header id="header">
+            <div class="container">
+                <h1>Naruto Memory Match</h1>
             </div>
-            <header>
-                <h1> Naruto Memory Match</h1>
-             </header> -->
-             <!-- <div id="difficulty">
-                <div>Hokage</div>
-                <div>Jounin</div>
-                <div>Chuunin</div>
-                <div>Genin</div>
-            </div> -->
-            <div id="container">
-                  
-            <h1><img src="images/header.png" alt=""></h1>
-            <section id="game_board">
-                
-                <div id="card_container" data-framework="hashirama">
-                    <img class="front_face" src="images/hashirama.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="jiraiya">
-                     <img class="front_face" src="images/jiraiya.gif" alt="">
-                     <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="kakashi">
-                    <img class="front_face" src="images/kakashi.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="madara">
-                    <img class="front_face" src="images/madara.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="minato">
-                    <img class="front_face" src="images/minato.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="obikak">
-                    <img class="front_face" src="images/obikak.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="orochimaru">
-                    <img class="front_face" src="images/orochimaru.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="rasenshuriken">
-                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="tsunade">
-                    <img class="front_face" src="images/tsunade.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="sasuke">
-                    <img class="front_face" src="images/sasuke.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="hashirama">
-                    <img class="front_face" src="images/hashirama.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="jiraiya">
-                     <img class="front_face" src="images/jiraiya.gif" alt="">
-                     <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="kakashi"> 
-                    <img class="front_face" src="images/kakashi.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="madara">
-                    <img class="front_face" src="images/madara.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="minato">
-                    <img class="front_face" src="images/minato.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="obikak">
-                    <img class="front_face" src="images/obikak.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="orochimaru">
-                    <img class="front_face" src="images/orochimaru.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="rasenshuriken">
-                    <img class="front_face" src="images/rasenshuriken.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="tsunade">
-                    <img class="front_face" src="images/tsunade.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-                <div id="card_container" data-framework="sasuke">
-                    <img class="front_face" src="images/sasuke.gif" alt="">
-                    <img class="back_face" src="images/cover2.jpg" alt="">
-                </div>
-        </section>  
+        </header>
+        <section id="game_board">
+            <div id="card_container" data-framework="hashirama">
+                <img class="front_face" src="images/hashirama.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
             </div>
+            <div id="card_container" data-framework="jiraiya">
+                <img class="front_face" src="images/jiraiya.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="kakashi">
+                <img class="front_face" src="images/kakashi.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="madara">
+                <img class="front_face" src="images/madara.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="minato">
+                <img class="front_face" src="images/minato.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="orochimaru">
+                <img class="front_face" src="images/orochimaru.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="rasenshuriken">
+                <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="tsunade">
+                <img class="front_face" src="images/tsunade.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="sasuke">
+                <img class="front_face" src="images/sasuke.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="hashirama">
+                <img class="front_face" src="images/hashirama.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="jiraiya">
+                 <img class="front_face" src="images/jiraiya.gif" alt="">
+                 <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="kakashi"> 
+                <img class="front_face" src="images/kakashi.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="madara">
+                <img class="front_face" src="images/madara.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="minato">
+                <img class="front_face" src="images/minato.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="obikak">
+                <img class="front_face" src="images/obikak.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="orochimaru">
+                <img class="front_face" src="images/orochimaru.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="rasenshuriken">
+                <img class="front_face" src="images/rasenshuriken.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="tsunade">
+                <img class="front_face" src="images/tsunade.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="sasuke">
+                <img class="front_face" src="images/sasuke.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+            <div id="card_container" data-framework="obikak">
+                <img class="front_face" src="images/obikak.gif" alt="">
+                <img class="back_face" src="images/cover2.jpg" alt="">
+            </div>
+        </section>           
     </body>
     <script>
         const cards = document.querySelectorAll('#card_container');
